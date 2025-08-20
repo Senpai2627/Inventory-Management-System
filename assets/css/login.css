@@ -1,0 +1,171 @@
+:root {
+    --primary-blue: #2563eb;
+    --hover-blue: #1d4ed8;
+    --light-blue: #eff6ff;
+    --white: #ffffff;
+    --gray-light: #f3f4f6;
+    --gray-border: #e5e7eb;
+    --gray-text: #6b7280;
+    --gray-dark: #374151;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--white);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: var(--gray-dark);
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.card-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.card-header h4 {
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.system-title {
+    font-size: 0.875rem;
+    color: var(--gray-text);
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    font-size: 0.875rem;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    background-color: var(--white);
+    color: var(--gray-dark);
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.btn-login {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-weight: 500;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: var(--hover-blue);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.forgot-password {
+    color: var(--gray-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-blue);
+}
+
+.card-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--gray-border);
+    font-size: 0.875rem;
+    color: var(--gray-text);
+}
+
+.card-footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #b91c1c;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    background-color: #fef2f2;
+    border-left: 3px solid #dc2626;
+}
+
+.g-recaptcha {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 0.5rem;
+        background-color: var(--white);
+    }
+    
+    .card-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}

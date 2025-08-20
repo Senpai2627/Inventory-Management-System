@@ -1,0 +1,99 @@
+admin 
+username: admin
+password: password
+
+inventory_manager 1
+username: john
+password: john1234
+
+inventory_manager 2
+username: manager
+password: manager123
+
+staff 1
+username: paul
+password: paul1234
+
+staff 2
+username: staff
+password: staff123
+
+staff 2
+username: yang
+password: yang1234
+
+Group 3 Members:
+
+1. Baquiran, Rommel
+2. Soriano, Paul Eduard P.
+3. Ellaso, Marianne
+4. Corañez, John Carlo N.
+
+
+
+Sturcture Tree File 
+
+├── admin
+│   ├── add_item.php
+│   ├── audit_logs.php
+│   ├── categories.php
+│   ├── dashboard.php
+│   ├── delete_item.php
+│   ├── item_details.php
+│   ├── items.php
+│   ├── process_transaction.php
+│   ├── profile.php
+│   ├── reports.php
+│   ├── roles.php
+│   ├── suppliers.php
+│   ├── transactions.php
+│   ├── update_item.php
+│   └── users.php
+├── assets
+│   ├── css
+│   │   ├── reusable
+│   │   │   ├── footer.css
+│   │   │   └── header.css
+│   │   ├── login.css
+│   │   ├── register.css
+│   │   └── style.css
+│   └── js
+│       └── script.js
+├── config
+│   └── database.php
+├── includes
+│   ├── auth.php
+│   ├── db_operations.php
+│   ├── footer.php
+│   ├── functions.php
+│   ├── header.php
+│   └── inventory_functions.php
+├── manager
+│   ├── add_item.php
+│   ├── audit_logs.php
+│   ├── categories.php
+│   ├── dashboard.php
+│   ├── delete_item.php
+│   ├── items.php
+│   ├── process_transaction.php
+│   ├── profile.php
+│   ├── reports.php
+│   ├── suppliers.php
+│   ├── transactions.php
+│   └── update_item.php
+├── staff
+│   ├── dashboard.php
+│   ├── items.php
+│   ├── process_transaction.php
+│   ├── profile.php
+│   ├── suppliers.php
+│   └── transactions.php
+├── index.php
+├── inventory_rbac_system (1).sql
+├── login.php
+├── logout.php
+├── pass.txt
+├── README.md
+├── register.php
+└── verify-otp.php
+```

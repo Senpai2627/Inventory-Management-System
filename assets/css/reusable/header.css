@@ -1,0 +1,180 @@
+:root {
+            --primary-blue: #1a73e8;
+            --dark-blue: #0d47a1;
+            --light-blue: #e8f0fe;
+            --hover-blue: #4285f4;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--white);
+            overflow-x: hidden;
+            padding-top: 70px; /* Add padding to body to account for fixed navbar */
+        }
+        
+        /* Sticky Navbar */
+        .navbar {
+            background: var(--white) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 0.8rem 1rem;
+            position: fixed; /* Make navbar fixed */
+            top: 0; /* Position at the top */
+            width: 100%; /* Full width */
+            z-index: 1030; /* Ensure navbar stays on top of other elements */
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .navbar:hover {
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+            color: var(--primary-blue) !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-brand:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+            background-color: var(--light-blue);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link i {
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover i {
+            transform: scale(1.1);
+        }
+        
+        /* Dropdown Animation */
+        .dropdown-menu {
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.3s ease;
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            margin-top: 0; /* Remove gap between navbar and dropdown */
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .dropdown-item {
+            padding: 0.5rem 1.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light-blue);
+            color: var(--primary-blue) !important;
+            padding-left: 1.8rem;
+        }
+        
+        /* Alert Animations */
+        .alert {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            animation: slideIn 0.5s ease;
+            border-left: 4px solid;
+            background-color: var(--white);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .alert-success {
+            color: #28a745;
+            border-left-color: #28a745;
+        }
+        
+        .alert-danger {
+            color: #dc3545;
+            border-left-color: #dc3545;
+        }
+        
+        /* Container Animation */
+        .container {
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Active Nav Item */
+        .nav-item.active .nav-link {
+            background-color: var(--light-blue);
+            font-weight: 600;
+            color: var(--primary-blue) !important;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                padding: 1rem 0;
+                background-color: var(--white);
+            }
+            
+            .nav-link {
+                margin: 0.2rem 0;
+            }
+            
+            body {
+                padding-top: 60px; /* Adjust padding for mobile */
+            }
+        }

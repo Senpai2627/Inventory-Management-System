@@ -1,0 +1,230 @@
+:root {
+    --primary-blue: #2563eb;
+    --hover-blue: #1d4ed8;
+    --light-blue: #eff6ff;
+    --white: #ffffff;
+    --gray-light: #f3f4f6;
+    --gray-border: #e5e7eb;
+    --gray-text: #6b7280;
+    --gray-dark: #374151;
+    --error-red: #dc2626;
+    --success-green: #16a34a;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--white);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: var(--gray-dark);
+}
+
+.register-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid var(--gray-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.card-header h4 {
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.system-title {
+    font-size: 0.875rem;
+    color: var(--gray-text);
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    font-size: 0.875rem;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    transition: border-color 0.2s ease;
+    background-color: var(--white);
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.btn-register {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: var(--hover-blue);
+}
+
+.password-feedback {
+    margin-top: 0.5rem;
+}
+
+.password-strength {
+    height: 4px;
+    background: var(--gray-border);
+    border-radius: 2px;
+    margin-top: 0.25rem;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+.password-match {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.password-match.valid {
+    color: var(--success-green);
+}
+
+.card-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--gray-border);
+    font-size: 0.875rem;
+    color: var(--gray-text);
+}
+
+.card-footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: var(--error-red);
+    padding: 0.875rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    background-color: #fef2f2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.success-message {
+    color: var(--success-green);
+    padding: 0.875rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    background-color: #f0fdf4;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.requirement-list {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+}
+
+.requirement-list li {
+    margin-bottom: 0.25rem;
+    position: relative;
+    list-style-type: none;
+}
+
+.requirement-list li:before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+}
+
+.requirement-list .valid {
+    color: var(--success-green);
+}
+
+.requirement-list .valid:before {
+    content: "✓";
+    left: -1.25rem;
+}
+
+@media (max-width: 576px) {
+    .register-container {
+        padding: 0.75rem;
+    }
+    
+    .card-header {
+        padding: 1.75rem 1.5rem 1rem;
+    }
+    
+    .card-body {
+        padding: 1.75rem 1.5rem;
+    }
+}
