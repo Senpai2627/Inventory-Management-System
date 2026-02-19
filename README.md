@@ -95,9 +95,9 @@ Navigate to: `http://localhost/inventory_system`
 
 | Username | Password | Role | Email |
 |----------|----------|------|-------|
-| admin | password | Admin | admin@inventory.com |
-| manager | password | Inventory Manager | baka@gmail.com |
-| rommel | password | Staff | rommel@gmail.com |
+| admin | ******* | Admin | admin@inventory.com |
+| manager | ******* | Inventory Manager | baka@gmail.com |
+| rommel | ****** | Staff | rommel@gmail.com |
 
 > ⚠️ **Important**: Change all default passwords immediately after first login for security!
 
@@ -304,5 +304,6 @@ This project is proprietary and for authorized use only.
 
 **Last Updated**: February 20, 2026
 **Status**: Production Ready
+
 
 
